@@ -7,13 +7,13 @@ import {motion} from "framer-motion"
 
 const IntroPage = () => {
   return (
-    <div className='flex flex-col w-full  min-h-screen items-center justify-center md:py-15 gap-5'>
+    <div className='flex flex-col w-full  min-h-screen items-center justify-center md:py-15 gap-5 p-3'>
 
           <motion.div
         initial={{opcaity: 0, y:-30}}
        whileInView={{opacity: 1, y:0}}
         transition={{duration: 0.8, delay:0.2 }}
-      className='flex absolute left-10 top-10'>
+      className='flex absolute md:left-10 left-5 top-10 md:h-[178px] md:w-[522px] h-[70px] w-[320px]'>
         <img alt="" className='h-[178px]'
         src="https://images.squarespace-cdn.com/content/v1/6658dc833079153370a6e050/c2848d91-b7e8-4af4-ace2-b872a372ca1f/BG_BEAST_GAMES_LOGO_FULL_COLOR_RGB_900PX_W_300PPI.png?format=1500w"
     />
@@ -30,8 +30,8 @@ const IntroPage = () => {
         gap-10 '>
 
             <div className='flex flex-col w-full items-center justify-center'>
-  <h1 className='md:text-[30px] md:leading-[35px] font-bold  anton'>We are back</h1>
-            <p className=' md:text-[36px] md:leading-[40px] font-bold'>Beast Games Season 2 </p>
+  <h1 className='md:text-[30px] text-xl md:leading-[35px] font-bold  anton'>We are back</h1>
+            <p className=' md:text-[36px] text-2xl md:leading-[40px] font-bold'>Beast Games Season 2 </p>
             </div>
             
             <div className=' flex flex-col gap-2'>
