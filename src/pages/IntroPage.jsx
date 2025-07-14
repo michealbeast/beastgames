@@ -35,8 +35,8 @@ const IntroPage = () => {
             </div>
             
             <div className=' flex flex-col gap-2'>
-                <h1 className='font-bold text-sm'>Here's what you need to know about submitting 
-                    for a chance to compete in BEAST GAMES Season 2:</h1>
+                <h1 className='font-bold text-sm'>Here’s what you need to know about submitting for a
+                   chance to compete in BEAST GAMES Season 2:</h1>
 
                     <ul className='flex flex-col gap-2'>
                         {
@@ -178,30 +178,29 @@ const infoData = [
     
   
   {
-    title: "You need to be at least 18 by the time you submit for a chance to compete in the BEAST GAMES Season 2.",
-    
+    title: "You need to be 18 or older by the time you submit for a chance to compete in the BEAST GAMES SEASON 2.",
   },
 
   {
-        title: "You need to have a valid passport that is good through January 2026. "
+        title: "You need to have a valid passport of your country that is good through 2026"
     },
   {
-    title: "You either need to be a legal citizen of the U.S. and able to legally travel and reside for U.S. from any country OR you need to be able to legally travel to and reside in the U.S. for 90 days.",
+    title: "You either need to be a legal citizen of the U.S. and able to legally travel and reside for U.S. from any country OR you need to be able to legally travel to and reside in the U.S. for 90 days",
   
   },
 
   {
-    title: 'You need to have a valid U.S. Social Security or Tax ID number, or have appropriate visa(s) or waiver(s) to allow you to legally compete in BEAST GAMES in the United States.'
+    title: 'You need to be free of any obligations and able to travel internationally for up to six consecutive weeks during the period of the games. For purposes of contest secrecy and integrity, those who chose to compete in BEAST GAMES will need to be free of any and all obligations for the duration of the competition (including any personal, family or work demands or responsibilities) and without interference or interruption of any type'
   },
 
   {
-    title: 'You need to be free of any obligations and able to travel internationally for up to six consecutive weeks during the period of May to July 2025 (dates are subject to change). For purposes of contest secrecy and integrity, those who chose to compete in BEAST GAMES will need to be free of any and all obligations for the duration of the competition (including any personal, family or work demands or responsibilities) and without interference or interruption of any type.  '
+    title: 'You must not be a current candidate for public office or intend to be or intend to run for public office within one year as of July 1st, 2026'
   },
  {
-    title: 'You must not be a current candidate for public office or intend to be or intend to run for public office within one year as of July 1st, 2026.'
+    title: 'You are willing to pay a $150 one time fee to process your registration'
  },
   {
-    title: "You are not currently employed by or closely connected to anyone who is involved with the creation, production, administration or judging of BEAST GAMES or anyone working on the MrBeast YouTube channel. ",
+    title: "You are not currently employed by or closely connected to anyone who is involved with the creation, production, administration or judging of BEAST GAMES or anyone working on the MrBeast YouTube channel",
   }
 ];
 
