@@ -128,11 +128,11 @@ When you're ready, SUBMIT A 1-MINUTE VIDEO
 
                                                    
                                                    <h1 className='text-sm   w-full'>
-  <b className=''>​•​What makes YOU an unforgettable competitor? </b>find a quiet space
+  <b className=''>​•Make sure we can hear you</b>find a quiet space
                                                    </h1>
 
       <h1 className='text-sm   w-full'>
-  <b className=''>​•​Keep it clean—</b>No personal details like addresses, SSNs, bank info or other private material.find a quiet space
+  <b className=''>​•​Keep it clean—</b>No personal details like addresses, SSNs, bank info or other private material.
                                                    </h1>
                                                 
 
@@ -142,18 +142,20 @@ When you're ready, SUBMIT A 1-MINUTE VIDEO
                         As a part of the submission process, we will not ask you for your banking or financial information.
                          Please be aware of potential scams. </p>
 
-                         <div className='w-full flex items-center justify-center'>
-                            <Link to="/form">
-                            <h1 className='uppercase font-bold md:text-3xl underline'>Clik here to begin!</h1>
-                            </Link>
-                         </div>
-
+                       
                     <h1 className='font-bold text-sm'> PHOTO: Get ready to upload a recent photos of yourself </h1>  
 
                      <p className='text-[13px]'>
         Please reach out to support@mysticartpictures.net with any questions or
          technical issues. It may take us 72 hours to get back to you.                
                      </p>
+
+                       <div className='w-full flex items-center justify-center'>
+                            <Link to="/form">
+                            <h1 className='uppercase font-bold md:text-3xl underline'>Clik here to begin!</h1>
+                            </Link>
+                         </div>
+
 
   
                                                         
