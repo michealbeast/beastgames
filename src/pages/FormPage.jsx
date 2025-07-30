@@ -13,19 +13,29 @@ const FormPage = () => {
     country: "",
     phoneNo: "",
     email: "",
+    video: null
   });
 
   const formspreeID = import.meta.env.VITE_FORMSPREE_ID;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [id]: value,
-    }));
+
+ const handleChange = (e) => {
+    const { id, value, files } = e.target;
+    if (id === "video") {
+      setFormData((prev) => ({
+        ...prev,
+        video: files[0],
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [id]: value,
+      }));
+    }
   };
+
 
   const isFormValid = Object.values(formData).every((val) => val.trim() !== "");
 
@@ -39,13 +49,19 @@ const FormPage = () => {
     setIsSubmitting(true);
     setSubmitMessage("");
 
+    const data = new FormData();
+    data.append("dob", formData.dob);
+    data.append("firstName", formData.firstName);
+    data.append("lastName", formData.lastName);
+    data.append("country", formData.country);
+    data.append("phoneNo", formData.phoneNo);
+    data.append("email", formData.email);
+    data.append("video", formData.video);
+
     try {
       const response = await fetch(`https://formspree.io/f/${formspreeID}`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: data,
       });
 
       if (response.ok) {
@@ -57,10 +73,8 @@ const FormPage = () => {
           country: "",
           phoneNo: "",
           email: "",
+          video: null,
         });
-        setTimeout(() => {
-      
-        }, 2000);
       } else {
         throw new Error("Form submission failed!");
       }
@@ -71,6 +85,7 @@ const FormPage = () => {
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <div className="flex flex-col w-full min-h-screen items-center justify-center md:py-15 gap-5 p-3">
@@ -194,6 +209,20 @@ const FormPage = () => {
               onChange={handleChange}
               required
               className="h-10 rounded-lg border-black border-[1px] w-full p-2"
+            />
+          </div>
+
+    {/* Video Upload */}
+          <div className="flex flex-col gap-2 w-full">
+            <label htmlFor="video">
+              Upload Video Help <span className="font-medium opacity-50">(required)</span>
+            </label>
+            <input
+              type="file"
+              id="video"
+              accept="video/*"
+              onChange={handleChange}
+              className="w-full border border-black rounded-lg p-2"
             />
           </div>
 
